@@ -1,0 +1,65 @@
+:root {
+  --bg-color: #f0f4f8;
+  --accent-blue: #1e88e5;
+  --accent-blue-light: #e3f2fd;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg-color);
+  transition: background 0.3s ease;
+  color: #1e1e1e;
+}
+
+/* Accent on headings */
+h4, h6, .MuiTypography-h4, .MuiTypography-h6 {
+  color: var(--accent-blue);
+}
+
+/* Glassmorphism card */
+.card-glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(30, 136, 229, 0.1);
+  border-radius: 12px;
+}
+
+/* Buttons override */
+.MuiButton-contained {
+  background-color: var(--accent-blue) !important;
+  color: white !important;
+}
+
+.MuiButton-contained:hover {
+  background-color: #1565c0 !important;
+}
+
+.MuiButton-outlined {
+  color: var(--accent-blue) !important;
+  border-color: var(--accent-blue) !important;
+}
+
+.MuiButton-outlined:hover {
+  background-color: var(--accent-blue-light) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .MuiStack-root {
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  .forecast-grid, .saved-weather {
+    flex-direction: column !important;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .forecast-card {
+    width: 100% !important;
+  }
+}
