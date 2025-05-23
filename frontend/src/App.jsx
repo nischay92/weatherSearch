@@ -171,20 +171,53 @@ function App() {
       </Box>
     )}
 
-    <Box mt={8} width="100%" textAlign="center" py={4} px={2} sx={{ backgroundColor: '#e3f2fd' }}>
-      <Typography variant="h6" gutterBottom>About this App</Typography>
-      <Typography variant="body2" maxWidth={700} mx="auto">
-        Built by <b>Nischay Nanaiah Chettira Shambu</b> as part of the PM Accelerator program. Product Manager Accelerator is a platform that empowers aspiring product managers with real-world experience, mentorship, and industry connections. 
-        Learn more on our{' '}
-        <a
-          href="https://www.linkedin.com/school/pmaccelerator/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          LinkedIn page
-        </a>.
-      </Typography>
-    </Box>
+    <Box
+      component="footer"
+      sx={{
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+        mt: 8,
+        px: 2,
+        pb: 6,
+      }}
+    >
+      <Box
+        sx={{
+          width: '100%',
+          maxWidth: 800,
+          bgcolor: '#ffffff',
+          p: 4,
+          borderRadius: 3,
+          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.08)',
+          textAlign: 'center',
+        }}
+      >
+        <Typography variant="h6" gutterBottom>
+          About this App
+        </Typography>
+
+        <Typography variant="body2" mb={2}>
+          Built by <strong>Nischay Nanaiah</strong> as part of the PM Accelerator program.
+        </Typography>
+
+        <Typography variant="body2" mb={2} textAlign="justify">
+          The Product Manager Accelerator Program supports PMs at all levels — from students to directors. Our community learns and develops real-world product and leadership skills through immersive training, AI projects, and expert mentorship.
+        </Typography>
+
+        <Box textAlign="left" component="ul" sx={{ pl: 2 }}>
+          <li><strong>🚀 PMA Pro:</strong> FAANG-level prep, mock interviews, referrals, and offers up to $800K/year.</li>
+          <li><strong>🚀 AI PM Bootcamp:</strong> Build and launch a real AI product with engineers & designers.</li>
+          <li><strong>🚀 PMA Power Skills:</strong> Sharpen leadership and executive presentation skills.</li>
+          <li><strong>🚀 PMA Leader:</strong> Get promoted to Director or Product Executive roles.</li>
+          <li><strong>🚀 1:1 Resume Review:</strong> Create a killer PM resume with guaranteed interviews.</li>
+        </Box>
+
+        
+      </Box>
+    </Box>  
+
+
   </Box>
 );
 

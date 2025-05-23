@@ -35,9 +35,7 @@ const SearchBar = ({ onSearch, onGeoLocate }) => {
         mb: 4,
       }}
     >
-      <Typography variant="h5" align="center" gutterBottom>
-        Zephyros Weather App
-      </Typography>
+      
 
       <Stack
         spacing={2}
