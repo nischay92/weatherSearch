@@ -20,9 +20,18 @@ app.use('/api/weather', weatherRoutes);
 
 app.use(express.static(path.join(__dirname, '../frontend/dist')));
 
-app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
+import { existsSync } from 'fs';
+
+const indexPath = path.join(__dirname, '../frontend/dist/index.html');
+
+app.get('*', (req, res) => {
+  if (existsSync(indexPath)) {
+    res.sendFile(indexPath);
+  } else {
+    res.status(404).send('Frontend not built or missing.');
+  }
 });
+
 
 mongoose
   .connect(process.env.MONGO_URI)
