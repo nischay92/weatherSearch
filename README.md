@@ -73,18 +73,13 @@ cd weather-app
 ```bash
 cd backend
 npm install
-# create .env file with:
-# MONGO_URI=<your-mongodb-uri>
-# OPENWEATHER_API_KEY=<your-api-key>
+
 node index.js
 ```
 #### 3. Frontend set-up
 ```bash
 cd ../frontend
 npm install
-# create .env file with:
-# VITE_GOOGLE_MAPS_API_KEY=<your-api-key>
-# VITE_API_BASE=http://localhost:5000
 npm run dev
 ```
 
